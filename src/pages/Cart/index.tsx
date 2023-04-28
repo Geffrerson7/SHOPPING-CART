@@ -102,24 +102,24 @@ export default function Cart() {
       );
     };
     renderCardPaymentBrick(bricksBuilder);
-  }, []);
+  }, [nItem, total, products]);
 
   return (
     <>
       <Header />
       <div className="container mt-3">
-        <h1 className="center">Carrito de compras</h1>
+        <h1 className="center text-light text-center">Carrito de compras</h1>
         {products.length === 0 && (
-          <div className="noProduct">No hay productos añadidos</div>
+          <div className="noProduct text-light">No hay productos añadidos</div>
         )}
         <div className="row mt-5">
           <div className="col-md-6">
-            <h4>Payment</h4>
+            <h4 className="text-light">Payment</h4>
             <hr />
-            <div id="cardPaymentBrick_container"></div>
+            <div id="cardPaymentBrick_container" className="mb-5"></div>
           </div>
           <div className="col-md-6">
-            <h4>Orden Summary</h4>
+            <h4 className="text-light">Orden Summary</h4>
             <hr />
             {products.map((product: Product) => (
               <div className="card mb-3" key={product.product_code}>
@@ -130,12 +130,16 @@ export default function Cart() {
                         className="rounded"
                         src={product.image}
                         width={70}
+                        style={{
+                          border: "1px solid #ddd", 
+                          boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.3)", 
+                        }}
                         alt=""
                       />
                     </div>
                     <div className="col-8">
                       <h5>{product.name}</h5>
-                      <p>{product.description}</p>
+                      <p>{product.type}</p>
                     </div>
                     <div className="col-2">
                       <p className="font-weight-bold">

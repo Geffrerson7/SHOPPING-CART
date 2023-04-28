@@ -2,6 +2,7 @@ const products =[
     {
       id: 1,
       product_code:"product_code_1",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -11,6 +12,7 @@ const products =[
     {
       id: 2,
       product_code:"product_code_2",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -20,6 +22,7 @@ const products =[
     {
       id: 3,
       product_code:"product_code_3",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -29,6 +32,7 @@ const products =[
     {
       id: 4,
       product_code:"product_code_4",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -38,6 +42,7 @@ const products =[
     {
       id: 5,
       product_code:"product_code_5",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -47,6 +52,7 @@ const products =[
     {
       id: 6,
       product_code:"product_code_6",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -56,6 +62,7 @@ const products =[
     {
       id: 7,
       product_code:"product_code_7",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -65,6 +72,7 @@ const products =[
     {
       id: 8,
       product_code:"product_code_8",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -74,6 +82,7 @@ const products =[
     {
       id: 9,
       product_code:"product_code_9",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",
@@ -83,6 +92,7 @@ const products =[
     {
       id: 10,
       product_code:"product_code_10",
+      type: "Bootcamp",
       name: "Curso de Master en Python",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ59I7tJYMWFCTLnoqF4ADzbewJBaLv6Zkg&usqp=CAU",

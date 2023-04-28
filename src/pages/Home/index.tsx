@@ -38,28 +38,31 @@ export default function Home() {
     <>
       <Header />
       <div className="container px-4 mb-5">
-        <h1 className="mt-3">Lista de Cursos</h1>
-        <div className="row gap-4 mt-5">
+        <h1 className="mt-3 text-center text-light">Lista de Cursos</h1>
+        <div className="row gap-4 mt-5 justify-content-center">
           {products.map((product: Product) => (
             <div
-              className="col-md-3 card"
+              className="col-md-4 card text-center"
               key={product.product_code}
               style={{
-                width: "14rem",
+                width: "21rem",
               }}
             >
               <img
-                className="card-img-top"
+                className="card-img-top mt-4"
                 style={{
-                  width: "112%",
-                  marginLeft: "-12px",
+                  width: "90%",
+                  margin: "auto",
+                  border: "1px solid #ddd", 
+                  boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.3)", 
                 }}
                 src={product.image}
                 alt=""
               />
               <div className="card-body">
                 <h4>{product.name}</h4>
-                <p>{product.description}</p>
+                <p>{product.type}</p>
+                <p style={{textAlign: "justify"}}>{product.description}</p>
                 <p>$ {product.price}</p>
                 <div className="d-grid">
                   <button
