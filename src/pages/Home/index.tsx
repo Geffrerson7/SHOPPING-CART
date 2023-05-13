@@ -13,7 +13,7 @@ export default function Home() {
     const productsCart = JSON.parse(
       localStorage.getItem("products_cart") || "[]"
     );
-    //product.id = nItem;
+
     product.product_code = `${product.id}_${new Date().getTime()}`;
     productsCart.push(product);
     setNum(nItem + 1);
@@ -53,8 +53,8 @@ export default function Home() {
                 style={{
                   width: "90%",
                   margin: "auto",
-                  border: "1px solid #ddd", 
-                  boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.3)", 
+                  border: "1px solid #ddd",
+                  boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.3)",
                 }}
                 src={product.image}
                 alt=""
@@ -62,7 +62,7 @@ export default function Home() {
               <div className="card-body">
                 <h4>{product.name}</h4>
                 <p>{product.type}</p>
-                <p style={{textAlign: "justify"}}>{product.description}</p>
+                <p style={{ textAlign: "justify" }}>{product.description}</p>
                 <p>$ {product.price}</p>
                 <div className="d-grid">
                   <button

@@ -22,8 +22,8 @@ export default function Cart() {
     );
     setProducts(newProducts);
     setNum(nItem - 1);
-    localStorage.removeItem("products_cart")
-    localStorage.removeItem("n_item")
+    localStorage.removeItem("products_cart");
+    localStorage.removeItem("n_item");
     Swal.fire({
       position: "center",
       icon: "success",
@@ -79,17 +79,35 @@ export default function Cart() {
         callbacks: {
           onReady: () => {},
           onSubmit: async (cardFormData: any) => {
-            const response = await fetch(
+            const response: any = await fetch(
               "http://127.0.0.1:8000/proccess-payment/",
               {
                 method: "POST",
-                
+
                 headers: {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify(cardFormData),
               }
-            );
+            ).then((response) => {
+              if (response.ok) {
+                Swal.fire(
+                  "Created!",
+                  "The payment was created successfully.",
+                  "success"
+                ).then((result) => {
+                  if (result.isConfirmed) {
+                    localStorage.clear(), location.reload();
+                  }
+                });
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "An error occurred!",
+                });
+              }
+            });
             console.log("response", await response.json());
           },
           onError: (error: any) => {},
@@ -131,8 +149,8 @@ export default function Cart() {
                         src={product.image}
                         width={70}
                         style={{
-                          border: "1px solid #ddd", 
-                          boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.3)", 
+                          border: "1px solid #ddd",
+                          boxShadow: "2px 2px 6px rgba(0, 0, 0, 0.3)",
                         }}
                         alt=""
                       />
